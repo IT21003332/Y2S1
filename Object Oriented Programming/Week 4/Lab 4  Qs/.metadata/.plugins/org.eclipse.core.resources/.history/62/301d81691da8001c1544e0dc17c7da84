@@ -1,0 +1,10 @@
+public class Calculation{
+	
+	static double addition(double x, double y) {
+		return x + y;
+	}
+	
+	static double substraction(double x, double y) {
+		return x - y;
+	}
+}

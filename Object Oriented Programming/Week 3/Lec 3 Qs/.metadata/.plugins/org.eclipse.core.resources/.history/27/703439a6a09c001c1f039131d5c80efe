@@ -1,0 +1,25 @@
+class person{
+	
+	private String name;
+	private int age;
+	private double sal;
+	
+	public person(String name,int age,double sal) {
+		this.name = name;
+		this.age = age;
+		this.sal = sal;
+	}
+	
+	public void show() {
+		System.out.println("Name: " + name + "\nAge: " + age + "\nSalary: " + sal);
+	}
+}
+
+public class MainFile {
+	public static void main(String args[]) {
+		
+		person p1 = new person("Devindu",45,45000.0);
+		
+		System.out.println(p1.show());
+	}
+}

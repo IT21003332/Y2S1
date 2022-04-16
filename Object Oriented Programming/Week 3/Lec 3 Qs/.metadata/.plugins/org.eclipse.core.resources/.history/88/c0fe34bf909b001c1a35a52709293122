@@ -1,0 +1,17 @@
+
+public class person {
+	
+	private String name;
+	private int age;
+	private double Salary;
+	
+	private static String batchId;
+	
+	static public String getID() {
+		return batchId;
+	}
+	
+	static public void setID(String batchinfo){
+		batchId = batchinfo;
+	}
+}

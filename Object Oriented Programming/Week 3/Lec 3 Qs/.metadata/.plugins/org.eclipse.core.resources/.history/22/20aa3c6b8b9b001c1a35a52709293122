@@ -1,0 +1,10 @@
+
+public class MyTestMain {
+	public static void main(String args[]) {
+		
+		person.setID("45IT");
+		String x = person.getID();
+		
+		System.out.println(x);
+	}
+}

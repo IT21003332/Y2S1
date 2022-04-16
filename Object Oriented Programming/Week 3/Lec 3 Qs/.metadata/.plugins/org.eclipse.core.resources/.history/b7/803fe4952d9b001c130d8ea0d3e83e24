@@ -1,0 +1,20 @@
+
+public class StaticEx {
+	
+	static {
+		System.out.println("Static Block");
+		
+	}		//Static block is always the first to work 
+	{
+		System.out.println("Block");
+	}
+	
+	public StaticEx() {
+		System.out.println("StaticEx() constructor");
+	}
+	
+	public static void main(String args[]) {
+		StaticEx staticexe = new StaticEx();
+		StaticEx static2 = new StaticEx();
+	}
+}

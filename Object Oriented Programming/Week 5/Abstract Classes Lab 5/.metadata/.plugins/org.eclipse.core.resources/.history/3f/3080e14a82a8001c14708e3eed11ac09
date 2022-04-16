@@ -1,0 +1,61 @@
+package exercise3;
+import java.util.*;
+//Lab Sheet on Try Catch Blocks
+
+public class MainFile {
+	public static void main(String[] args) {
+	
+	   int maxSubjects;
+	   int [] marks = new int[5];
+	   int total;
+	   double avg;
+	   
+	   try {
+	   // 1. Input a value for maxSubjects
+	   //    from keyboard
+		   
+	// 2. Using a for loop 
+	//    input marks 
+		   Scanner input = new Scanner(System.in);
+		   
+		   System.out.println("Please enter the max Subject count: ");
+		   maxSubjects = input.nextInt();
+		   for(int i = 0;i <maxSubjects;i++) {
+			  System.out.println("Please enter marks of Exam " + (i+1) + ": ");
+			 marks[i]  = input.nextInt();
+			  total = total + marks[i];
+		   }
+			  // 3. Calculate the avg marks
+			  avg = total / marks.length;
+			  
+		   }
+
+		   
+	   
+
+	   
+	  
+	   
+	   // 4. Use a try catch block to
+	   //    prevent the following 
+	   //    run time errors
+	   
+	   //   (a) Input valid integers to the 
+	   //         inputs
+	   //   (b) ArithmeticException division
+	   //        by zero
+	   //   (c) ArrayIndexOutOfBounds
+	   //         Exception
+	   
+	   } catch (Exception e) {
+	     
+	   }
+	   
+	   finally {
+	      System.out.println("This code will be gurrentied to run");
+	   }
+	 
+	   System.out.println("The end");
+	
+	}
+}

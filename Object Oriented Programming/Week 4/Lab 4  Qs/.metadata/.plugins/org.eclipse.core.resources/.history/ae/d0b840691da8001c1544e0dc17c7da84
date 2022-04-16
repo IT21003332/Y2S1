@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class MainFile{
+	public static void main(String args[]) {
+		
+		Scanner input = new Scanner(System.in);
+		int cond;
+		System.out.println("Main Menu\n1. Addition\n2. Substraction\n::");
+		cond = input.nextInt();
+		int x, y;
+		if(cond == 1) {
+			
+			
+			System.out.println("Please enter first number:");
+			x = input.nextInt();
+			System.out.println("Please enter the second number: ");
+			y = input.nextInt();
+			System.out.println("Addition = " + Calculation.addition(x, y));
+		}
+		else if(cond == 2) {
+			
+			System.out.println("Please enter first number: ");
+			x = input.nextInt();
+			System.out.println("Please enter second number: ");
+			y = input.nextInt();
+			System.out.println("Substraction = " + Calculation.substraction(x, y));
+		}
+	}
+}

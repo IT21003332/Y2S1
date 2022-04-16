@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+D:\SLIIT 2nd Year\Object Oriented Programming\Week 4\Week 4 Lec\.metadata\.plugins\org.eclipse.jdt.core
+3472341213.index
+2625646048.index
+256849901.index
+1865797976.index
+274550510.index
+82999873.index

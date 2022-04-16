@@ -1,0 +1,12 @@
+
+public class L3Q8 {
+	public static void main(String args[]) {
+		
+		Pet p = new Pet("Lissie","Smith",3);
+		p.showDetails();
+		
+		Pet C = new Cat("Kyan","Silva",4,4);
+		
+		C.showDetails();
+	}
+}

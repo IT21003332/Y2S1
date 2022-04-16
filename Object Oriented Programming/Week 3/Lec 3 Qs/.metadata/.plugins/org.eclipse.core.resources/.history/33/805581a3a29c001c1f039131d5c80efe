@@ -1,0 +1,39 @@
+class person{
+	
+	private String name;
+	private int age;
+	private double sal;
+	
+	public person() {
+		name = null;
+		age = 0;
+		sal = 0;
+	}
+	public person(String name,int age,double sal) {
+		this.name = name;
+		this.age = age;
+		this.sal = sal;
+	}
+	
+	public void show() {
+		System.out.println("Name: " + name + "\nAge: " + age + "\nSalary: " + sal);
+	}	//This is casual
+	
+	public void show1(person p1) {
+		System.out.println("Name: " + name + "\nAge: " + age + "\nSalary: " + sal);
+	}	//This is a method to show the pass by reference usage
+	
+}
+
+public class MainFile {
+	public static void main(String args[]) {
+		
+		person p1 = new person("Devindu",45,45000.0);
+		
+		//p1.show();
+		person p2 = new person();
+		
+		p1.show1(p1);
+		
+	}
+}

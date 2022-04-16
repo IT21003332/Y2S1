@@ -1,0 +1,19 @@
+
+public class Box {
+	
+	
+	private double length;
+	private double width;
+	private double height;
+	
+	public Box(double length, double width, double height) {
+		this.height = height; 
+		this.width = width;
+		this.height = height;
+	}
+	
+	public String toString() {
+		
+		return "Length = " + this.length + "\nWidth = " + this.width + "\nHeight = " + this.height;
+	}
+}

@@ -1,0 +1,11 @@
+
+public class MyMain {
+	public static void main(String args[]) {
+		
+		String name = "Devindu Samarasinghe";
+		
+		Integer.parseInt(name); //In this case you can clearly see these are 
+								//letters that need to be converted. therefore there will be
+						// a runtime error
+	}
+}

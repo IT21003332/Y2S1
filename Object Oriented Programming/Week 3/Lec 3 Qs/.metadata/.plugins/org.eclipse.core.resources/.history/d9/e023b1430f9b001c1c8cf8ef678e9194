@@ -1,0 +1,22 @@
+package stackHeap;
+
+public class Ex {
+	public static void main(String args[]) {
+		
+		Person person = new Employee(); //When you create inheritance objects, compiler thinks heap object
+						// is same as the stack reference in compile time. 
+						// BUT During runtime it assigns the sub class object to the super class reference
+			//This method of creating sub class objects can ensure the inheritance works. 
+		
+		
+		person.method(); 
+		
+		double value = 124.654;
+		int no = (int)value;	//This is called casting 
+		
+		System.out.println("Double : " + value);
+		System.out.println("Int of the same after casting: " + (int)value);
+		
+		
+	}
+}

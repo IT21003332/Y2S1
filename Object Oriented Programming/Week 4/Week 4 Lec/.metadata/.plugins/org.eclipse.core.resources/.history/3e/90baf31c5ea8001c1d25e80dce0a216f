@@ -1,0 +1,18 @@
+package package3;
+
+public class DualCatchin1 {
+	public static void main(String args[]) {
+		
+		try {
+			int a = 42;
+			int b = 0;
+			int x = a / b;
+		}catch(ArithmeticException e) {
+			System.out.println("Exception : " + e);
+		}
+		String name = "da123";
+		int value = Integer.parseInt(name);
+		
+		System.out.println("X = " + x + "Value = " + value);
+	}
+}	

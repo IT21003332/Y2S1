@@ -1,0 +1,37 @@
+public class Feet {
+	
+	private int feet;
+	private int inches;
+	
+	public Feet(int feet, int inches) {
+		
+		this.feet = feet;
+		this.inches = inches;
+	}
+	//overloaded constructor that can accept another feet object
+	public Feet(Feet obj) {
+		
+		this.feet = obj.feet;
+		this.inches = obj.inches;
+		
+	}
+	
+	public void add(Feet f1, Feet f2) {
+		
+		int totFeet = f1.feet + f2.feet;
+		int totInch = f1.inches + f2.inches;
+		
+		if(totInch > 12) {
+			totInch  = totInch - 12;
+			totFeet++;
+		}
+		//Question says store them in the current Feet object
+		this.feet = totFeet;
+		this.inches = totInch;
+		
+		//System.out.println(totFeet + "' " + totInch + " \n");
+	}
+	public void print(String msg) {
+		System.out.println(msg +this.feet + "' " + this.inches + "\"");
+	}
+}

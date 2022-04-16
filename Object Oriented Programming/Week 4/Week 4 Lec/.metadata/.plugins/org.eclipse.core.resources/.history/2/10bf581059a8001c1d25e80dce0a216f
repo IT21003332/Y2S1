@@ -1,0 +1,12 @@
+package package2;
+
+public class Ex2 {
+	public static void main(String args[]) {
+		
+		int d,a;
+		d = 0;
+		a = 42 /d;
+		
+		System.out.println("value of A: " + a);
+	}
+}

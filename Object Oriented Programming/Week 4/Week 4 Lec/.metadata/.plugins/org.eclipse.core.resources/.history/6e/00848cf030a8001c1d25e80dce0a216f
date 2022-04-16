@@ -1,0 +1,11 @@
+
+public class Rectangle extends Shape {
+	
+	private int length;
+	private int width;
+	
+	
+	public int getArea(int length, int width) {
+		return length * width;
+	}
+}
