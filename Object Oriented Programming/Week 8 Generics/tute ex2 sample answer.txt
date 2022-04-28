@@ -1,0 +1,49 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+public class Ex1 {
+
+	public static void main(String[] args) {
+		ArrayList<Integer> xArr = new ArrayList<>();
+		xArr.add(2);
+		xArr.add(3);
+		
+		ArrayList<String> yArr = new ArrayList<>();
+		yArr.add("AA");
+		yArr.add("BB");
+
+		List temp = new ArrayList();
+		
+		Simple<ArrayList<Integer>, ArrayList<String>> simple = new Simple();
+		HashMap<String, List> hashMap = simple.swap(xArr, yArr, temp);
+		
+		System.out.println(hashMap.get("X"));
+		System.out.println(hashMap.get("Y"));
+	}
+}
+
+class Simple<T extends List, V extends List>{
+	
+	public HashMap<String, List> swap(T xArr, V yArr, List tempArr){
+		
+		HashMap<String, List> hashMap = new HashMap<>();
+		
+		for (int i = 0; i < xArr.size(); i++) {
+			tempArr.add(xArr.get(i));
+			xArr.remove(i);
+			i--;
+		}
+		for (int i = 0; i < yArr.size(); i++) {
+			xArr.add(yArr.remove(i));
+			i--;
+		}
+		for (int i = 0; i < tempArr.size(); i++) {
+			yArr.add(tempArr.get(i));
+		}
+		hashMap.put("X", xArr);
+		hashMap.put("Y", yArr);
+		
+		return hashMap;
+	}
+}
