@@ -446,24 +446,34 @@ insert into transactions values(1001,70102007,'credit',50000,getDate())
 
 --Exercise 5) Create a trigger to ensure that no employee has a salary greater than his/her own manager
 
-select * from emp
-select * from dept
+select * from emp 
+select * from dept 
 
-create trigger salCap 
-on emp
+create trigger empCheckMgr
+on emp 
 for insert, update
 as 
 begin
-	
-declare @manId int
-declare @uid int
-declare @sal real
 
-select @manId = e.eid from emp e, dept d where e.eid = d.managerId
-select @uid = eid from inserted where 
-select @sal = sal from inserted 
+declare @eid real
+declare @managerId real
 
-if @uid > @manId
+select @eid = eid from inserted
+select @managerId = managerId from dept
+select @dept 
+
+declare @salary real 
+select @salary = emp.salary from emp, dept where emp.eid = dept.managerId and dept.managerId = @managerId
+
+declare @eidSal real 
+select @eidSal = salary from emp where eid = @eid
+
+if @eidSal > @salary
+	begin
+		print 'Subordinates cannot earn more than Manager'
+		rollback transaction
+	end
+end 
 
 
 
