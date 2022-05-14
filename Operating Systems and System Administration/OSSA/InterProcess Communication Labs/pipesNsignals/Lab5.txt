@@ -1,0 +1,19 @@
+
+Few IPCs when trying Inter process communication
+
+> Pipes 
+> Signals 
+> Message Queues
+> Semaphore sets
+> Shared memory segments 
+> Sockets 
+
+Pipes - Oldest communication method.
+	takes a single argument to an array of 2 indexes and process, fd[1] is the write function and fd[0] is the output of the fd1 
+	
+int fd[2];
+if(pipe(fd) < 0)
+	printf*("Error");
+
+	
+	can use even within a process to communicate
