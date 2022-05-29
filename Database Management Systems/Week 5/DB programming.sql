@@ -477,3 +477,14 @@ end
 
 
 
+declare @cnt int 
+set @cnt = 100
+
+if(@cnt > 75)
+print 'Hallelujah'
+print 'Midlevel'
+else
+
+
+declare @tot int
+select @tot = count(*) from emp
